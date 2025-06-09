@@ -1,0 +1,16 @@
+<svg width="200" height="40" xmlns="http://www.w3.org/2000/svg">
+  <!-- Horizontal line -->
+  <line x1="10" y1="20" x2="190" y2="20" stroke="#12f7d6" stroke-width="2" />
+
+  <!-- Start diamond -->
+  <!-- <polygon points="10,10 20,20 10,30 0,20" fill="#12f7d6" /> -->
+
+  <!-- Middle diamond -->
+  <!-- <polygon points="150,14 157,20 150,26 143,20" fill="#12f7d6" /> -->
+
+  <circle cx="10" cy="20" r="4" fill="#12f7d6" />
+  <circle cx="190" cy="20" r="4" fill="#12f7d6" />
+
+  <!-- End diamond -->
+  <!-- <polygon points="290,10 300,20 290,30 280,20" fill="#12f7d6" /> -->
+</svg>

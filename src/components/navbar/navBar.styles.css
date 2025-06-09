@@ -1,0 +1,20 @@
+@media screen and (max-width: 768px) {
+  .navContainer {
+    bottom: 4px;
+    left: 50%;
+    translate: -50% 0%;
+    flex-direction: row;
+    align-items: center;
+    top: unset;
+  }
+
+  .navItems {
+    flex-direction: row;
+  }
+}
+
+.navItem {
+  @apply mx-auto rounded-full;
+  font-size: 1.5rem;
+  padding: 0.6rem;
+}
