@@ -1,0 +1,12 @@
+<svg viewBox="0 0 1440 600" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+  <path
+    fill="#00e0c6"
+    d="
+      M0,600              <!-- bottom-left corner -->
+      C300,400 600,200 900,150   <!-- curve upward -->
+      C1100,100 1300,100 1440,0   <!-- second curve to top-right -->
+      L1440,0              <!-- top-right corner -->
+      L0,0                <!-- top-left corner -->
+      Z"
+  />
+</svg>
