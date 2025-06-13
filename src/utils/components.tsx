@@ -43,7 +43,7 @@ const AnimateToView = ({
           : controls.start({ scale: 1, opacity: 1 })
       }
       onViewportLeave={() => {
-        controls.start({ scale: 0.4, opacity: 0 })
+        controls.set({ scale: 0.4, opacity: 0 })
       }}
     >
       {children}
@@ -58,4 +58,34 @@ const BulletText = ({ text }: { text: string }) => (
   </div>
 )
 
-export { FlexedContainer, Icon, AnimateToView, BulletText }
+const IconAndTitle = ({ icon, text }: { icon: ReactNode; text: string }) => (
+  <div className="px-4 p-2 bg-background2 rounded-lg group cursor-default flex items-center gap-4 justify-center relative">
+    <span className="group-hover:left-1/2 group-hover:-translate-x-1/2 transition-opacity duration-300 relative">
+      {icon}
+    </span>
+    <span className="group-hover:opacity-0">{text}</span>
+  </div>
+)
+
+const IconToolTip = ({ icon, text }: { icon: ReactNode; text: string }) => (
+  <div className="relative group inline-block cursor-pointer">
+    <div className="w-12 h-12">{icon}</div>
+
+    <div
+      className="absolute bottom-full mb-2 left-1/2 -translate-x-1/2 
+                  px-2 py-1 rounded bg-black text-white text-xs 
+                  opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-pre"
+    >
+      {text}
+    </div>
+  </div>
+)
+
+export {
+  FlexedContainer,
+  Icon,
+  AnimateToView,
+  BulletText,
+  IconAndTitle,
+  IconToolTip,
+}
