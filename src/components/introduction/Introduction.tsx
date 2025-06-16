@@ -1,7 +1,12 @@
 import { MdOutlineMail } from "react-icons/md"
 import { motion } from "motion/react"
+import { Sections } from "../../constants/constants"
 
 export const Introduction = () => {
+  const handleScrollToContact = () => {
+    const sectionElement = document.getElementById(Sections.CONTACT)
+    sectionElement?.scrollIntoView({ behavior: "smooth" })
+  }
   return (
     <div>
       <h1>
@@ -22,7 +27,6 @@ export const Introduction = () => {
       <h1>
         I'm <span className="text-greenDark">Syed Rizwan</span>
       </h1>
-      <h2>Full-Stack Developer | React, TypeScript, Node, Express, Postgres</h2>
 
       <p className="mt-5">
         I build fast, scalable, and modern web applications—from polished
@@ -34,7 +38,10 @@ export const Introduction = () => {
 
       <h2 className="mt-1">Let's build something great together.</h2>
 
-      <button className="text-4xl text-greenDark mt-3 flex items-center gap-1">
+      <button
+        onClick={handleScrollToContact}
+        className="text-4xl text-greenDark mt-8 flex items-center gap-1 cursor-pointer"
+      >
         Let’s Talk
         <span className="rounded-full bg-gray-500 p-1 mt-1">
           <MdOutlineMail className="text-greenDark text-2xl" />

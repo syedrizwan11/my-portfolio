@@ -35,3 +35,24 @@ p {
   font-size: 1rem;
   padding-bottom: 0.8rem;
 }
+
+/* Scrollbar for modern browsers */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #04ddd2;
+  border-radius: 1rem;
+  background-clip: content-box;
+}
+
+* {
+  scrollbar-color: #04ddd2 transparent;
+  scrollbar-width: thin;
+}

@@ -12,7 +12,7 @@ const FlexedContainer = ({
 )
 
 const Icon = ({ children }: { children: ReactNode }) => (
-  <div className="p-1 px-4 bg-greenDark rounded-full text-black">
+  <div className="p-1 px-4 bg-gradient-to-r from-teal-400 to-sky-400 via-indigo-400 rounded-full text-black hover:scale-105 transition cursor-default">
     {children}
   </div>
 )
