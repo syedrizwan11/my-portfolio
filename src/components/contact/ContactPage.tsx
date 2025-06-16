@@ -22,7 +22,6 @@ export const ContactPage = () => {
     message: "",
   })
   const [isLoading, setIsLoading] = useState(false)
-  console.log(isLoading)
 
   const formRef = useRef(null)
 
@@ -170,7 +169,10 @@ export const ContactPage = () => {
       <div className="z-[1] absolute bottom-0 left-0 w-screen">
         <img src={footer} />
       </div>
-      <div className="z-20 absolute text-center bottom-0 w-[100vw] mx-auto left-0 text-black p-2">
+      <div
+        id="footer"
+        className="z-20 absolute text-center bottom-0 w-[100vw] mx-auto left-0 text-black p-2"
+      >
         © 2025 Syed Rizwan. All rights reserved.{" "}
         <span className="hidden sm:inline">
           Some visual elements are inspired by figma community.

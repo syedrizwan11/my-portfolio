@@ -8,7 +8,7 @@ import { SkillStack } from "../components/skill-stack/SkillStack"
 // import { SkillsInfo } from "../components/skills-info/SkillsInfo"
 import { TopBar } from "../components/top-bar/TopBar"
 import { Sections } from "../constants/constants"
-import linesBackground2 from "/images/dark-background2.jpg"
+import linesBackground2 from "/images/green-background.jpeg"
 
 export const MainLayout = () => {
   return (
@@ -18,15 +18,16 @@ export const MainLayout = () => {
         className="min-h-screen text-sm sm:text-lg"
         style={{
           background: `url(${linesBackground2})`,
-          backgroundSize: "cover",
           backgroundOrigin: "center",
+          backgroundRepeat: "no-repeat",
+          backgroundSize: "cover",
         }}
       >
         <NavBar />
-        <div className="w-full h-full min-h-screen backdrop-blur-md">
+        <div className="w-full h-full min-h-screen">
           <TopBar />
           {/* <h1 className="text-4xl text-center mb-4 mt-4">Full-Stack Developer</h1> */}
-          <div className="flex justify-evenly flex-col items-center mx-[10%] mt-5 gap-4 lg:flex-row">
+          <div className="flex justify-evenly flex-col-reverse items-center px-[10%] mt-5 gap-4 lg:flex-row">
             <Introduction />
             <ResumeContainer />
             {/* <SkillsInfo /> */}
@@ -35,26 +36,26 @@ export const MainLayout = () => {
       </div>
       <div
         id={Sections.ABOUT}
-        className={`md:bg-gradient-to-tr bg-gradient-to-br  from-60% from-background2 via-teal-500 to-background2 min-h-screen text-sm sm:text-lg p-4`}
+        className={`md:bg-gradient-to-tr bg-gradient-to-br  from-60% from-background2 via-teal-500 to-background2 min-h-screen text-sm sm:text-lg p-4 sm:px-[10%] px-[7%]`}
       >
         <AboutMe />
       </div>
       <div
         id={Sections.EXPERIENCE}
-        className={`min-h-screen text-sm sm:text-lg p-4 px-[10%] pt-[5%]`}
+        className={`min-h-screen text-sm sm:text-lg p-4 sm:px-[10%] px-[7%] pt-[5%]`}
       >
         <Experience />
       </div>
       <div
         id={Sections.SKILLS}
-        className={` min-h-screen text-sm sm:text-lg p-4 px-[10%] pt-[5%]`}
+        className={` min-h-screen text-sm sm:text-lg p-4 sm:px-[10%] px-[7%] pt-[5%]`}
       >
         <SkillStack />
       </div>
 
       <div
         id={Sections.CONTACT}
-        className={`relative min-h-screen text-sm sm:text-lg p-4 px-[10%] pt-[5%]`}
+        className={`relative min-h-screen text-sm sm:text-lg p-4 sm:px-[10%] px-[7%] pt-[5%]`}
       >
         <ContactPage />
       </div>

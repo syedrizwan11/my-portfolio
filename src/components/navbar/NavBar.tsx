@@ -8,7 +8,11 @@ import { IoBriefcaseOutline } from "react-icons/io5"
 import { MdOutlineMail } from "react-icons/md"
 import { HiOutlineHome } from "react-icons/hi"
 import { useScrollObserver } from "../../hooks/useScrollObserver"
-import { Sections, type sectionsType } from "../../constants/constants"
+import {
+  AllSections,
+  Sections,
+  type sectionsType,
+} from "../../constants/constants"
 export const NavBar = () => {
   const [showNav, setShowNav] = useState(true)
   const [isHorizontal, setIsHorizontal] = useState(false)
@@ -35,6 +39,10 @@ export const NavBar = () => {
     mediaQuery.addEventListener("change", handleResize)
     return () => mediaQuery.removeEventListener("change", handleResize)
   }, [])
+
+  useEffect(() => {
+    setShowNav(currentSection !== AllSections.Footer)
+  }, [currentSection])
 
   return (
     <div
