@@ -11,7 +11,7 @@ export const AboutMe = () => {
   }
   return (
     <div>
-      <div className="px-[10%] pt-[2%]">
+      <div className="pt-[2%]">
         <div className="text-greenDark mx-auto text-3xl w-fit text-center">
           About Myself
           <Line />

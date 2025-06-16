@@ -9,4 +9,9 @@ export const Sections = {
   SKILLS: "skills",
   CONTACT: "contact",
 } as const
+export const FooterID = "footer"
+
 export type sectionsType = (typeof Sections)[keyof typeof Sections]
+
+export const AllSections = { ...Sections, Footer: "footer" }
+export type allSectionsType = (typeof AllSections)[keyof typeof AllSections]
