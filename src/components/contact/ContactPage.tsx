@@ -8,6 +8,14 @@ import { IoMdMail } from "react-icons/io"
 import { MdPermContactCalendar } from "react-icons/md"
 import { AnimateToView } from "../../utils/components"
 import { toast, ToastContainer } from "react-toastify"
+import { IoCopy } from "react-icons/io5"
+import {
+  MY_EMAIL,
+  MY_GITHUB,
+  MY_LINKEDIN,
+  MY_NUMBER,
+  MY_WHATSAPP,
+} from "../../constants/constants"
 interface formDataProps {
   name: string
   email: string
@@ -49,6 +57,10 @@ export const ContactPage = () => {
         setIsLoading(false)
       })
   }
+  const copyInfo = (info: string) => {
+    navigator.clipboard.writeText(info)
+    toast("Copied")
+  }
   return (
     <div>
       <div className="flex justify-between sm:flex-row flex-col gap-4 z-10 relative">
@@ -60,13 +72,34 @@ export const ContactPage = () => {
           <div> I'm Available for full-time employment and freelance work.</div>
           <div className="sm:py-12 mt-4">
             <div className="text-2xl mb-4">📬 Feel free to reach out:</div>
-            <div className="text-greenDark">srizwan.dev@gmail.com</div>
-            <div className="text-greenDark">+92347-9665933</div>
+            <div className="text-greenDark flex items-center justify-center gap-2">
+              {MY_EMAIL}
+              <IoCopy
+                className="cursor-pointer text-xl"
+                onClick={() => copyInfo(MY_EMAIL)}
+              />
+            </div>
+            <div className="text-greenDark flex items-center justify-center gap-2">
+              {MY_NUMBER}
+              <IoCopy
+                className="cursor-pointer text-xl"
+                onClick={() => copyInfo(MY_NUMBER)}
+              />
+            </div>
             <div className="flex text-greenDark text-3xl justify-center gap-4 mt-4">
-              <FaLinkedin className=" cursor-pointer hover:text-cyan-500 transition" />
-              <FaGithubSquare className=" cursor-pointer hover:text-cyan-500 transition" />
-              <IoMdMail className=" cursor-pointer hover:text-cyan-500 transition" />
-              <MdPermContactCalendar className=" cursor-pointer hover:text-cyan-500 transition" />
+              <a href={MY_LINKEDIN} target="_blank">
+                <FaLinkedin className=" cursor-pointer hover:text-cyan-500 transition" />
+              </a>
+              <a href={MY_GITHUB} target="_blank">
+                <FaGithubSquare className=" cursor-pointer hover:text-cyan-500 transition" />
+              </a>
+              <a href={`mailto:${MY_EMAIL}`}>
+                <IoMdMail className=" cursor-pointer hover:text-cyan-500 transition" />
+              </a>
+
+              <a href={MY_WHATSAPP} target="_blank">
+                <MdPermContactCalendar className=" cursor-pointer hover:text-cyan-500 transition" />
+              </a>
             </div>
           </div>
         </div>

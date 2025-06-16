@@ -1,4 +1,11 @@
-export const skills = ["REACT", "NODE.JS", "EXPRESS", "PRISMA", "POSTGRES"]
+export const skills = [
+  "REACT",
+  "NODE.JS",
+  "EXPRESS",
+  "PRISMA",
+  "POSTGRES",
+  "Serverless",
+]
 
 //export const  = ["home", "about", "", "PRISMA", "POSTGRES"]
 
@@ -10,6 +17,12 @@ export const Sections = {
   CONTACT: "contact",
 } as const
 export const FooterID = "footer"
+
+export const MY_EMAIL = "srizwan.dev@gmail.com"
+export const MY_NUMBER = "+923479665933"
+export const MY_LINKEDIN = "https://www.linkedin.com/in/syedrizwan-haider/"
+export const MY_GITHUB = "https://github.com/syedrizwan11"
+export const MY_WHATSAPP = "https://wa.me/message/G4QB27OSHJVHB1"
 
 export type sectionsType = (typeof Sections)[keyof typeof Sections]
 

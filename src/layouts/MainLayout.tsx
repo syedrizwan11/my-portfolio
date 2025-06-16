@@ -18,16 +18,15 @@ export const MainLayout = () => {
         className="min-h-screen text-sm sm:text-lg"
         style={{
           background: `url(${linesBackground2})`,
-          backgroundOrigin: "center",
-          backgroundRepeat: "no-repeat",
+          backgroundPosition: window.innerWidth < 640 ? "70% 50%" : "0% 0%",
           backgroundSize: "cover",
         }}
       >
         <NavBar />
-        <div className="w-full h-full min-h-screen">
+        <div className="w-full h-full min-h-screen pb-22 ">
           <TopBar />
           {/* <h1 className="text-4xl text-center mb-4 mt-4">Full-Stack Developer</h1> */}
-          <div className="flex justify-evenly flex-col-reverse items-center px-[10%] mt-5 gap-4 lg:flex-row">
+          <div className="flex justify-evenly flex-col items-center px-[10%] mt-5 gap-4 lg:flex-row">
             <Introduction />
             <ResumeContainer />
             {/* <SkillsInfo /> */}
@@ -42,13 +41,13 @@ export const MainLayout = () => {
       </div>
       <div
         id={Sections.EXPERIENCE}
-        className={`min-h-screen text-sm sm:text-lg p-4 sm:px-[10%] px-[7%] pt-[5%]`}
+        className={`min-h-screen text-sm sm:text-lg p-4 sm:px-[10%] px-[7%] pt-22`}
       >
         <Experience />
       </div>
       <div
         id={Sections.SKILLS}
-        className={` min-h-screen text-sm sm:text-lg p-4 sm:px-[10%] px-[7%] pt-[5%]`}
+        className={` min-h-screen text-sm sm:text-lg p-4 sm:px-[10%] px-[7%] py-[10%]`}
       >
         <SkillStack />
       </div>

@@ -74,7 +74,7 @@ export const AboutMe = () => {
             </div>
             <div className=" relative rounded-full  w-[15rem] h-[22rem] border-b-[5px] border-greenDark overflow-hidden">
               <div className=" absolute top-[7rem] rounded-full border-4 border-greenDark bg-teal-100  w-[15rem] aspect-square transition-transform duration-300 hover:scale-102"></div>
-              <div className="absolute top-[-1rem]  z-1000">
+              <div className="absolute top-[-1rem]  z-50">
                 <img src={image}></img>
               </div>
             </div>

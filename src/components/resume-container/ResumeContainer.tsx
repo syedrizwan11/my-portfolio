@@ -9,7 +9,7 @@ import image from "/images/image.jpeg"
 
 export const ResumeContainer = () => {
   return (
-    <section className="bg-background border-2 border-white p-5 text-sm sm:min-w-[20rem] max-w-[75vw] box-content rounded-tl-[4rem] rounded-br-[4rem]">
+    <section className="bg-background border-2 border-white p-5 text-sm sm:min-w-[20rem] max-w-[20rem] box-content rounded-tl-[4rem] rounded-br-[4rem]">
       <div className="border-2 border-greenDark rounded-full h-22 w-22 mx-auto overflow-hidden">
         <img src={image} className="-mt-3 ml-0" />
       </div>
@@ -56,9 +56,10 @@ export const ResumeContainer = () => {
 
       <a
         href="/documents/Syed Rizwan Resume.pdf"
-        className="p-4 rounded-full flex items-center justify-center mt-5 gap-4 bg-white text-black text-xl cursor-pointer hover:text-green-700 transition"
+        className="group p-2 rounded-full flex items-center justify-center mt-5 gap-4 bg-sky-400 border-3 border-solid border-sky-300 text-black text-xl cursor-pointer hover:text-indigo-700 transition"
       >
-        Download Resume <FaDownload className="text-greenDark" />
+        Download Resume{" "}
+        <FaDownload className="text-black group-hover:text-indigo-700 transition" />
       </a>
     </section>
   )
