@@ -52,17 +52,37 @@ export const AboutMe = () => {
                   mind.
                 </p>
 
-                <p className="mb-4 text-lg">
-                  I care deeply about{" "}
-                  <span className="text-greenDark">code quality</span>, team
-                  collaboration, and creating user-centric products that align
-                  with business goals. Whether working independently or as part
-                  of a team, I bring a thoughtful, solution-driven mindset to
-                  every project.
-                </p>
+                <div className="p-4 rounded-xl border border-teal-500 bg-zinc-800 text-gray-100 shadow-md">
+                  <div className="flex items-center gap-3 mb-4">
+                    <span className="text-2xl">🧑‍💻</span>
+                    <div className=" text-base leading-relaxed">
+                      <span className="text-teal-300">I care deeply </span>
+                      about code quality, team collaboration, and creating
+                      user-centric products that align with business goals.
+                    </div>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <span className="text-2xl">🧩</span>
+                    <div className="text-base leading-relaxed">
+                      Whether working independently or as part of a team, I
+                      bring a{" "}
+                      <span className="text-teal-300">
+                        thoughtful, solution-driven mindset
+                      </span>{" "}
+                      to every project.
+                    </div>
+                  </div>
+                </div>
               </div>
-
-              <div className=" flex items-center gap-4 w-fit mt-5 border-teal-500 border-2  rounded-2xl text-center pl-4 overflow-hidden mx-auto md:mx-0">
+            </div>
+            <div>
+              <div className=" relative rounded-full  w-[15rem] h-[22rem] border-b-[5px] border-greenDark overflow-hidden">
+                <div className=" absolute top-[7rem] rounded-full border-4 border-greenDark bg-teal-100  w-[15rem] aspect-square transition-transform duration-300 hover:scale-102"></div>
+                <div className="absolute top-[-1rem]  z-50">
+                  <img src={image}></img>
+                </div>
+              </div>
+              <div className=" flex items-center gap-4 w-fit mt-5 border-teal-500 border-2  rounded-full text-center pl-4 overflow-hidden mx-auto md:mx-0">
                 Copy my Email Address
                 <div
                   onClick={handleCopy}
@@ -70,12 +90,6 @@ export const AboutMe = () => {
                 >
                   <TbCopy />
                 </div>
-              </div>
-            </div>
-            <div className=" relative rounded-full  w-[15rem] h-[22rem] border-b-[5px] border-greenDark overflow-hidden">
-              <div className=" absolute top-[7rem] rounded-full border-4 border-greenDark bg-teal-100  w-[15rem] aspect-square transition-transform duration-300 hover:scale-102"></div>
-              <div className="absolute top-[-1rem]  z-50">
-                <img src={image}></img>
               </div>
             </div>
           </>

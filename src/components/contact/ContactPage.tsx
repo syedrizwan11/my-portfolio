@@ -104,7 +104,7 @@ export const ContactPage = () => {
           </div>
         </div>
         <AnimateToView className="basis-1/2" ease="easeInOut" delay={false}>
-          <div className="bg-gradient-to-br from-[#B86ADF] to-[#FF6C63] rounded-2xl p-6 px-10">
+          <div className="bg-gradient-to-br from-[#B86ADF] to-[#FF6C63] rounded-2xl p-6 px-10 sm:mb-0 mb-22">
             <h1 className="  text-center mb-1 text-shadow-[#6082B6] text-shadow-2xs">
               Have an exciting idea?{" "}
               <span

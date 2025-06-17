@@ -56,10 +56,10 @@ export const ResumeContainer = () => {
 
       <a
         href="/documents/Syed Rizwan Resume.pdf"
-        className="group p-2 rounded-full flex items-center justify-center mt-5 gap-4 bg-sky-400 border-3 border-solid border-sky-300 text-black text-xl cursor-pointer hover:text-indigo-700 transition"
+        className="group p-2 rounded-full flex items-center justify-center mt-5 gap-4 bg-gradient-to-r from-teal-400 to-sky-400 shadow shadow-indigo-200 border-solid border-sky-300 text-black text-shadow-xs text-shadow-cyan-200 text-xl cursor-pointer hover:scale-105 transition"
       >
         Download Resume{" "}
-        <FaDownload className="text-black group-hover:text-indigo-700 transition" />
+        <FaDownload className="group-hover:text-indigo-600 transition " />
       </a>
     </section>
   )
