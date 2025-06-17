@@ -8,7 +8,7 @@ import { SkillStack } from "../components/skill-stack/SkillStack"
 // import { SkillsInfo } from "../components/skills-info/SkillsInfo"
 import { TopBar } from "../components/top-bar/TopBar"
 import { Sections } from "../constants/constants"
-import linesBackground2 from "/images/green-background.jpeg"
+import linesBackground2 from "/images/green-background.webp"
 
 export const MainLayout = () => {
   return (
