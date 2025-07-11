@@ -1,5 +1,5 @@
 import type { ReactNode } from "react"
-import { AnimateToView } from "../../utils/components"
+import { AnimateToView } from "../../components/animate-to-view/AnimateToView"
 
 interface StepperProps {
   titleSection: ReactNode

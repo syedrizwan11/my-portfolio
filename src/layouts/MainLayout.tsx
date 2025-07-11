@@ -1,37 +1,49 @@
-import { AboutMe } from "../components/about/AboutMe"
-import { ContactPage } from "../components/contact/ContactPage"
-import { Experience } from "../components/experience/Experience"
-import { Introduction } from "../components/introduction/Introduction"
-import { NavBar } from "../components/navbar/NavBar"
-import { ResumeContainer } from "../components/resume-container/ResumeContainer"
-import { SkillStack } from "../components/skill-stack/SkillStack"
-// import { SkillsInfo } from "../components/skills-info/SkillsInfo"
-import { TopBar } from "../components/top-bar/TopBar"
+import { useEffect, useState } from "react"
+import { AboutMe } from "../pages/about/AboutMe"
+import { ContactPage } from "../pages/contact/ContactPage"
+import { Experience } from "../pages/experience/Experience"
+import { SkillStack } from "../pages/skill-stack/SkillStack"
 import { Sections } from "../constants/constants"
-import linesBackground2 from "/images/green-background.webp"
+import { HashLoader } from "react-spinners"
+import { Home } from "../pages/home/Home"
 
 export const MainLayout = () => {
+  const [isLoading, setIsLoading] = useState(true)
+
+  useEffect(() => {
+    const handleLoad = () => {
+      setTimeout(() => {
+        setIsLoading(false)
+      }, 1000) // optional smooth delay
+    }
+
+    if (document.readyState === "complete") {
+      handleLoad()
+    } else {
+      window.addEventListener("load", handleLoad)
+    }
+
+    return () => window.removeEventListener("load", handleLoad)
+  }, [])
+
+  if (isLoading)
+    return (
+      <div className="flex justify-center items-center flex-col w-screen h-screen">
+        <HashLoader color="#46ecd5" />
+        <div>
+          <span className="text-sm">made by </span>
+          <span className="text-teal-300">Rizwan</span>
+        </div>
+      </div>
+    )
+
   return (
     <div className="overflow-x-hidden bg-background2">
       <div
         id={Sections.HOME}
-        className="min-h-screen text-sm sm:text-lg"
-        style={{
-          background: `url(${linesBackground2})`,
-          backgroundPosition: window.innerWidth < 640 ? "70% 50%" : "0% 0%",
-          backgroundSize: "cover",
-        }}
+        className="min-h-screen text-sm sm:text-lg  bg-[url('/images/green-background.webp')] bg-cover bg-[70%_50%] sm:bg-[0%_0%]"
       >
-        <NavBar />
-        <div className="w-full h-full min-h-screen pb-22 ">
-          <TopBar />
-          {/* <h1 className="text-4xl text-center mb-4 mt-4">Full-Stack Developer</h1> */}
-          <div className="flex justify-evenly flex-col items-center px-[10%] mt-5 gap-4 lg:flex-row">
-            <Introduction />
-            <ResumeContainer />
-            {/* <SkillsInfo /> */}
-          </div>
-        </div>
+        <Home />
       </div>
       <div
         id={Sections.ABOUT}

@@ -1,11 +1,7 @@
 import { FaNodeJs, FaReact } from "react-icons/fa"
 import Line from "../../assets/svgs/line.svg?react"
 
-import {
-  AnimateToView,
-  IconAndTitle,
-  IconToolTip,
-} from "../../utils/components"
+import { IconAndTitle, IconToolTip } from "../../utils/components"
 import {
   SiExpress,
   SiPostgresql,
@@ -20,6 +16,7 @@ import js from "/svgs/icons_file-type-js-official.svg"
 import tailwind from "/svgs/icons_file-type-tailwind.svg"
 import git from "/svgs/icons_git.svg"
 import github from "/svgs/icons_github-fill.svg"
+import { AnimateToView } from "../../components/animate-to-view/AnimateToView"
 
 export const SkillStack = () => {
   return (
