@@ -1,6 +1,7 @@
 import { MdOutlineMail } from "react-icons/md"
 import { motion } from "motion/react"
-import { Sections } from "../../constants/constants"
+import { Animations, Sections } from "../../constants/constants"
+import { AnimateToView } from "../animate-to-view/AnimateToView"
 
 export const Introduction = () => {
   const handleScrollToContact = () => {
@@ -19,34 +20,51 @@ export const Introduction = () => {
             duration: 0.6,
             ease: "easeInOut",
             repeat: 1,
+            delay: 1.5,
           }}
         >
           👋
         </motion.span>
       </h1>
-      <h1>
-        I'm <span className="text-greenDark">Syed Rizwan</span>
-      </h1>
+      <AnimateToView ease="easeOut" animationType={Animations.SlideInToTop}>
+        <h1>
+          I'm <span className="text-greenDark">Syed Rizwan</span>
+        </h1>
+      </AnimateToView>
 
-      <p className="mt-5">
-        I build fast, scalable, and modern web applications—from polished
-        frontends to robust backends—built to scale and built to last.
-        {/* I build fast, scalable web applications—from polished frontends to robust
+      <AnimateToView
+        ease="easeOut"
+        animationType={Animations.SlideInToTop}
+        delay
+        delayMs={400}
+      >
+        <p className="mt-5">
+          I build fast, scalable, and modern web applications—from polished
+          frontends to robust backends—built to scale and built to last.
+          {/* I build fast, scalable web applications—from polished frontends to robust
         backends—focused on delivering lasting impact and collaborating with
         teams to solve complex problems. */}
-      </p>
+        </p>
 
-      <h2 className="mt-1">Let's build something great together.</h2>
+        <h2 className="mt-1">Let's build something great together.</h2>
+      </AnimateToView>
 
-      <button
-        onClick={handleScrollToContact}
-        className="text-4xl text-greenDark mt-8 flex items-center gap-1 cursor-pointer"
+      <AnimateToView
+        ease="easeOut"
+        animationType={Animations.SlideInToTop}
+        delay
+        delayMs={800}
       >
-        Let’s Talk
-        <span className="rounded-full bg-gray-500 p-1 mt-1">
-          <MdOutlineMail className="text-greenDark text-2xl" />
-        </span>
-      </button>
+        <button
+          onClick={handleScrollToContact}
+          className="text-4xl text-greenDark mt-8 flex items-center gap-1 cursor-pointer"
+        >
+          Let’s Talk
+          <span className="rounded-full bg-gray-500 p-1 mt-1">
+            <MdOutlineMail className="text-greenDark text-2xl" />
+          </span>
+        </button>
+      </AnimateToView>
     </div>
   )
 }

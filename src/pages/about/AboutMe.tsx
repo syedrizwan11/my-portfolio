@@ -1,13 +1,14 @@
 import image from "/images/me.png"
 import { TbCopy } from "react-icons/tb"
 import { ToastContainer, toast } from "react-toastify"
-import { AnimateToView } from "../../utils/components"
+import { AnimateToView } from "../../components/animate-to-view/AnimateToView"
 import Line from "../../assets/svgs/smallLine.svg?react"
+import { MY_EMAIL } from "../../constants/constants"
 
 export const AboutMe = () => {
   const handleCopy = () => {
     toast("Copied")
-    navigator.clipboard.writeText("srizwan.dev@gmail.com")
+    navigator.clipboard.writeText(MY_EMAIL)
   }
   return (
     <div>
@@ -20,7 +21,7 @@ export const AboutMe = () => {
         <AnimateToView className="flex gap-4 justify-between flex-col md:flex-row md:items-start items-center">
           <>
             <div className="basis-2/3">
-              <div className="bg-gradient-to-l from-background to-gray-600 p-4 mt-6 rounded-2xl transition-transform duration-300 hover:scale-102">
+              <div className="bg-gradient-to-l from-background to-gray-600 p-4 mt-6 rounded-2xl">
                 <h1 className="text-4xl font-bold mb-4 border-b-4 rounded-sm border-green-400 w-fit pb-2 pr-1">
                   Hi there,
                 </h1>

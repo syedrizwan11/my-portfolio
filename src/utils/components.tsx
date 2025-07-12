@@ -1,4 +1,3 @@
-import { motion, useAnimation } from "motion/react"
 import type { ReactNode } from "react"
 
 const FlexedContainer = ({
@@ -16,40 +15,6 @@ const Icon = ({ children }: { children: ReactNode }) => (
     {children}
   </div>
 )
-
-const AnimateToView = ({
-  children,
-  className,
-  ease = "backOut",
-  delay = true,
-}: {
-  children: ReactNode
-  className?: string
-  ease?: string
-  delay?: boolean
-}) => {
-  const controls = useAnimation()
-  return (
-    <motion.div
-      className={`${className}`}
-      initial={{ scale: 0.4, opacity: 0 }}
-      transition={{ ease, duration: 0.8 }}
-      animate={controls}
-      onViewportEnter={() =>
-        delay
-          ? setTimeout(() => {
-              controls.start({ scale: 1, opacity: 1 })
-            }, 300)
-          : controls.start({ scale: 1, opacity: 1 })
-      }
-      onViewportLeave={() => {
-        controls.set({ scale: 0.4, opacity: 0 })
-      }}
-    >
-      {children}
-    </motion.div>
-  )
-}
 
 const BulletText = ({ text }: { text: string }) => (
   <div className="flex gap-2">
@@ -81,11 +46,4 @@ const IconToolTip = ({ icon, text }: { icon: ReactNode; text: string }) => (
   </div>
 )
 
-export {
-  FlexedContainer,
-  Icon,
-  AnimateToView,
-  BulletText,
-  IconAndTitle,
-  IconToolTip,
-}
+export { FlexedContainer, Icon, BulletText, IconAndTitle, IconToolTip }

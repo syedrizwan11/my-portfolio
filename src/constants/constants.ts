@@ -7,7 +7,13 @@ export const skills = [
   "Serverless",
 ]
 
-//export const  = ["home", "about", "", "PRISMA", "POSTGRES"]
+export const Animations = {
+  FadeIn: "fadeIn",
+  SlideInToRight: "slideInToRight",
+  SlideInToTop: "slideInToTop",
+} as const
+
+export type AnimationTypes = (typeof Animations)[keyof typeof Animations]
 
 export const Sections = {
   HOME: "home",

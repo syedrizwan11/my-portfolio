@@ -6,7 +6,6 @@ import Line from "../../assets/svgs/line.svg?react"
 import { FaGithubSquare, FaLinkedin } from "react-icons/fa"
 import { IoMdMail } from "react-icons/io"
 import { MdPermContactCalendar } from "react-icons/md"
-import { AnimateToView } from "../../utils/components"
 import { toast, ToastContainer } from "react-toastify"
 import { IoCopy } from "react-icons/io5"
 import {
@@ -16,6 +15,7 @@ import {
   MY_NUMBER,
   MY_WHATSAPP,
 } from "../../constants/constants"
+import { AnimateToView } from "../../components/animate-to-view/AnimateToView"
 interface formDataProps {
   name: string
   email: string
