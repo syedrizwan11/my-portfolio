@@ -20,13 +20,13 @@ export const TopBar = () => {
         <div className="flex justify-between gap-4 sm:gap-8 items-center">
           <a href={MY_GITHUB} target="_blank">
             <span className="flex items-center gap-1">
-              <FaGithub className="text-green-300 text-4xl sm:text-3xl" />{" "}
+              <FaGithub className="text-green-300 text-3xl" />{" "}
               <span className="sm:inline hidden text-xl">Github</span>
             </span>
           </a>
           <a href={MY_LINKEDIN} target="_blank">
             <span className="flex items-center gap-1">
-              <FaLinkedin className="text-green-300 text-4xl sm:text-3xl" />
+              <FaLinkedin className="text-green-300 text-3xl" />
               <span className="sm:inline hidden text-xl">Linkedin</span>
             </span>
           </a>
