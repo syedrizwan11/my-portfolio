@@ -53,8 +53,8 @@ export const Experience = () => {
               text="Built a
                 dynamic component library using React and TypeScript for a
                 slide-based SP learning Portal Application. Created reusable
-                interactive components, activities and games ( like word search, hangman, scrabble etc.) for an educational portal used
-                by an International academic institute. Enabled content admins to
+                interactive components, activities and games ( like word search, hangman, scrabble etc.) for an educational portal for 
+                an International academic institute. Enabled content admins to
                 design lessons and activities dynamically aligned with the
                 academic calendar."
             />
