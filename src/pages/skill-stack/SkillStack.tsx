@@ -1,4 +1,4 @@
-import { FaNodeJs, FaReact } from "react-icons/fa"
+import { FaGithub, FaNodeJs, FaReact } from "react-icons/fa"
 import Line from "../../assets/svgs/line.svg?react"
 
 import { IconAndTitle, IconToolTip } from "../../utils/components"
@@ -15,7 +15,6 @@ import html from "/svgs/icons_file-type-html.svg"
 import js from "/svgs/icons_file-type-js-official.svg"
 import tailwind from "/svgs/icons_file-type-tailwind.svg"
 import git from "/svgs/icons_git.svg"
-import github from "/svgs/icons_github-fill.svg"
 import { AnimateToView } from "../../components/animate-to-view/AnimateToView"
 
 export const SkillStack = () => {
@@ -65,7 +64,7 @@ export const SkillStack = () => {
               />
             </div>
             <div className="text-xl my-4 text-gray-400">Other Technologies</div>
-            <div className="flex justify-around flex-wrap">
+            <div className="flex justify-center flex-wrap gap-4">
               <IconToolTip icon={<img src={html} alt="html" />} text="HTML5" />
               <IconToolTip icon={<img src={css} alt="css" />} text="CSS3" />
               <IconToolTip icon={<img src={js} alt="js" />} text="Javascript" />
@@ -74,10 +73,7 @@ export const SkillStack = () => {
                 text="Tailwind-css"
               />
               <IconToolTip icon={<img src={git} alt="git" />} text="Git" />
-              <IconToolTip
-                icon={<img src={github} alt="github" />}
-                text="Github"
-              />
+              <FaGithub title="Github" className="text-green-300 text-5xl" />
             </div>
           </div>
         </AnimateToView>

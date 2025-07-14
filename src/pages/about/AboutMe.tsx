@@ -18,7 +18,10 @@ export const AboutMe = () => {
           <Line />
         </div>
 
-        <AnimateToView className="flex gap-4 justify-between flex-col md:flex-row md:items-start items-center">
+        <AnimateToView
+          ease="easeOut"
+          className="flex gap-4 justify-between flex-col md:flex-row md:items-start items-center"
+        >
           <>
             <div className="basis-2/3">
               <div className="bg-gradient-to-l from-background to-gray-600 p-4 mt-6 rounded-2xl">
