@@ -54,13 +54,14 @@ export const Experience = () => {
                 dynamic component library using React and TypeScript for a
                 slide-based SP learning Portal Application. Created reusable
                 interactive components, activities and games ( like word search, hangman, scrabble etc.) for an educational portal used
-                by an Australian academic institute. Enabled content admins to
+                by an International academic institute. Enabled content admins to
                 design lessons and activities dynamically aligned with the
                 academic calendar."
             />
             <BulletText
-              text="Led full-stack development of a NAPLAN (National Assessment
-              Program) testing platform: Created responsive and accessible
+              text="Led the FullStack Development of an educational assessment
+              platform for an international client, closely modeled on
+              standardized testing systems: Created responsive and accessible
               interfaces using React, implementing multiple question types such
               as MCQs, image-based questions, sentence matchers, and
               drag-and-drop interactions."
