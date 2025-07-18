@@ -9,7 +9,10 @@ import image from "/images/image.jpeg"
 
 export const ResumeContainer = () => {
   return (
-    <section className="bg-background border-2 border-white p-5 text-sm sm:min-w-[20rem] max-w-[20rem] box-content rounded-tl-[4rem] rounded-br-[4rem]">
+    <section className="relative group bg-background border-2 border-white p-5 pb-3 text-sm sm:min-w-[20rem] max-w-[20rem] box-content rounded-2xl card ">
+      <div className="absolute z-1 w-[20%] h-[20%] flex items-center justify-center bg-teal-700 rounded-tr-[15px] rounded-bl-[100%] transition-all duration-500 top-0 right-0 group-hover:bg-cyan-500"></div>
+      <div className="absolute z-1 w-[20%] h-[20%] flex items-center justify-center bg-teal-700 rounded-tr-[100%] rounded-bl-[15px] transition-all duration-500 bottom-0 left-0 group-hover:bg-cyan-500"></div>
+
       <div className="border-2 border-greenDark rounded-full h-22 w-22 mx-auto overflow-hidden">
         <img src={image} className="-mt-3 ml-0" />
       </div>
@@ -56,7 +59,7 @@ export const ResumeContainer = () => {
 
       <a
         href="/documents/Syed Rizwan Resume.pdf"
-        className="group p-2 rounded-full flex items-center justify-center mt-5 gap-4 bg-gradient-to-r from-teal-400 to-sky-400 shadow shadow-indigo-200 border-solid border-sky-300 text-black text-shadow-xs text-shadow-cyan-200 text-xl cursor-pointer hover:scale-105 transition"
+        className="relative z-10 group p-2 rounded-xl w-fit ml-auto px-4 flex items-center justify-center mt-10 gap-4 bg-gradient-to-r from-teal-400 to-sky-400 group-hover:from-sky-400 group-hover:to-teal-400 shadow shadow-indigo-200 border-solid border-sky-300 text-black text-shadow-xs text-shadow-cyan-200 text-[1rem] sm:text-xl cursor-pointer hover:scale-105 transition"
       >
         Download Resume{" "}
         <FaDownload className="group-hover:text-indigo-600 transition " />
