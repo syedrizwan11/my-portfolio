@@ -26,35 +26,22 @@ export const Introduction = () => {
           👋
         </motion.span>
       </h1>
-      <AnimateToView ease="easeOut" animationType={Animations.SlideInToTop}>
+      <AnimateToView
+        ease="easeOut"
+        animationType={Animations.SlideInToTop}
+        staggerChildren
+      >
         <h1>
           I'm <span className="text-greenDark">Syed Rizwan</span>
         </h1>
-      </AnimateToView>
 
-      <AnimateToView
-        ease="easeOut"
-        animationType={Animations.SlideInToTop}
-        delay
-        delayMs={400}
-      >
         <p className="mt-5">
           I build fast, scalable, and modern web applications—from polished
           frontends to robust backends—built to scale and built to last.
-          {/* I build fast, scalable web applications—from polished frontends to robust
-        backends—focused on delivering lasting impact and collaborating with
-        teams to solve complex problems. */}
         </p>
 
         <h2 className="mt-1">Let's build something great together.</h2>
-      </AnimateToView>
 
-      <AnimateToView
-        ease="easeOut"
-        animationType={Animations.SlideInToTop}
-        delay
-        delayMs={800}
-      >
         <button
           onClick={handleScrollToContact}
           className="text-4xl text-greenDark mt-8 flex items-center gap-1 cursor-pointer"

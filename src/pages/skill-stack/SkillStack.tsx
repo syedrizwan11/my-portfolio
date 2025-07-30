@@ -21,7 +21,7 @@ export const SkillStack = () => {
   return (
     <div>
       <div className="flex justify-between sm:flex-row flex-col-reverse gap-10 z-10 relative">
-        <AnimateToView className="basis-1/2" ease="easeInOut" delay={false}>
+        <AnimateToView className="basis-1/2" ease="easeInOut">
           <div className="bg-background rounded-xl p-4 text-center">
             <h1 className="text-center">My TechStack</h1>
             <div className="mb-4 text-gray-400">

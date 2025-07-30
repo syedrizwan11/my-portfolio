@@ -18,11 +18,8 @@ export const AboutMe = () => {
           <Line />
         </div>
 
-        <AnimateToView
-          ease="easeOut"
-          className="flex gap-4 justify-between flex-col md:flex-row md:items-start items-center"
-        >
-          <>
+        <AnimateToView ease="easeOut">
+          <div className="flex gap-4 justify-between flex-col md:flex-row md:items-start items-center">
             <div className="basis-2/3">
               <div className="bg-gradient-to-l from-background to-gray-600 p-4 mt-6 rounded-2xl">
                 <h1 className="text-4xl font-bold mb-4 border-b-4 rounded-sm border-green-400 w-fit pb-2 pr-1">
@@ -96,10 +93,21 @@ export const AboutMe = () => {
                 </div>
               </div>
             </div>
-          </>
+          </div>
         </AnimateToView>
       </div>
-      <ToastContainer />
+      <ToastContainer
+        position="top-center"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick={false}
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="colored"
+      />
     </div>
   )
 }
