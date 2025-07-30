@@ -6,11 +6,15 @@ import { SkillStack } from "../pages/skill-stack/SkillStack"
 import { Sections } from "../constants/constants"
 import { HashLoader } from "react-spinners"
 import { Home } from "../pages/home/Home"
+import bgImage from "/images/green-background.webp"
+import { preload } from "react-dom"
 
 export const MainLayout = () => {
   const [isLoading, setIsLoading] = useState(true)
 
   useEffect(() => {
+    preload(bgImage, { as: "image" })
+
     const handleLoad = () => {
       setTimeout(() => {
         setIsLoading(false)
@@ -41,7 +45,8 @@ export const MainLayout = () => {
     <div className="overflow-x-hidden bg-background2">
       <div
         id={Sections.HOME}
-        className="min-h-screen text-sm sm:text-lg  bg-[url('/images/green-background.webp')] bg-cover bg-[70%_50%] sm:bg-[0%_0%]"
+        className="min-h-screen text-sm sm:text-lg bg-cover bg-[70%_50%] sm:bg-[0%_0%]"
+        style={{ backgroundImage: `url(${bgImage})` }}
       >
         <Home />
       </div>
