@@ -41,7 +41,7 @@ export const Stepper = ({
             <div>{titleSection}</div>
           </div>
         </div>
-        <AnimateToView ease="easeInOut" delay={false}>
+        <AnimateToView ease="easeInOut">
           <div className="bg-background rounded-2xl p-4">
             {descriptionSection}
           </div>

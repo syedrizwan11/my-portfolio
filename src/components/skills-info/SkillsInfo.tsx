@@ -2,7 +2,7 @@ import { FlexedContainer } from "../../utils/components"
 
 export const SkillsInfo = () => {
   return (
-    <section className="bg-background rounded-tr-[4rem] rounded-bl-[4rem] text-white p-7 text-sm">
+    <section className="bg-background rounded-tr-[4rem] rounded-bl-[4rem] text-white pt-5 pb-7 px-12 mt-4 w-fit text-sm">
       <FlexedContainer>
         <span className="text-greenDark">5+</span>
         Modern Technologies Mastered
