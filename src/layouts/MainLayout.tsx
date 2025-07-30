@@ -15,19 +15,19 @@ export const MainLayout = () => {
   useEffect(() => {
     preload(bgImage, { as: "image" })
 
-    const handleLoad = () => {
-      setTimeout(() => {
-        setIsLoading(false)
-      }, 1000) // optional smooth delay
+    const handleComplete = () => {
+      requestAnimationFrame(() => {
+        setTimeout(() => setIsLoading(false), 500)
+      })
     }
 
     if (document.readyState === "complete") {
-      handleLoad()
+      handleComplete()
     } else {
-      window.addEventListener("load", handleLoad)
+      window.addEventListener("load", handleComplete)
     }
 
-    return () => window.removeEventListener("load", handleLoad)
+    return () => window.removeEventListener("load", handleComplete)
   }, [])
 
   if (isLoading)
